@@ -1,5 +1,6 @@
 // interface -> ka main goal hota hai object ko shape/structure dena
 // interfaces gives the rules that are followed by the classes
+// 
 
 interface Chai{
     flavor: string;
