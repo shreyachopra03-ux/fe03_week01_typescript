@@ -1,6 +1,6 @@
 // generics templates hote hai jo code ko thoda sa reusable bnaa dete hai
 // generics usecase -> API responses & state management mei use hote hai
-
+// generics examples 
 
 // 1st ex
 function wrapInArray<T>(item: T): T[]{
