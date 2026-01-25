@@ -1,5 +1,5 @@
+// Interfaces
 // classes ke saath kaam karte waqt usually interface banaya jata hai taaki class usse implement kar sake
-
 
 type ChaiOrder = {
     type: string;
