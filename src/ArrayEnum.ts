@@ -1,3 +1,4 @@
+// examples of arrays and enums in TypeScript
 // Arrays
 type Chai = {
     name: string;
