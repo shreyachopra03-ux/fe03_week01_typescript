@@ -1,3 +1,5 @@
+// example of fn's
+
 function makeChai(type: string, cups: number) {
     console.log(`Making ${cups} cups of ${type}`);
 }
