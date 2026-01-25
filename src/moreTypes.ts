@@ -1,6 +1,6 @@
 // Type assertion: TypeScript ko forcefully batana ki kisi value ka type kya hai, aur TypeScript bina check kiye maan leta hai.
 
-//
+////
 let response: any = '42';
 
 //
