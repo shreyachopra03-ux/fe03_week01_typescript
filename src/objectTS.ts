@@ -51,10 +51,10 @@ type User = {
     password: string
 }
 
-const u: User = {
-    username: 'shreya',
-    // password: '123'
-}
+// const u: User = {
+//     username: 'shreya',
+//     // password: '123'
+// }
 
 // splitting out data types
 type Item = {name: string, quantity: number}
