@@ -1,4 +1,5 @@
 // Type Narrowing = check lagao → TS sure ho jaata hai → error gayab
+// 
 
 function getChai(kind: string | number) {
     if(typeof kind === "string") {
@@ -71,6 +72,7 @@ type ElaichiChai = {type: 'elaichi'; aroma: number};
 
 type Chai = MasalaChai | GingerChai | ElaichiChai
 
+// switch case
 function MakeChai(order: Chai) {
     switch (order.type) {
         case 'masala':
