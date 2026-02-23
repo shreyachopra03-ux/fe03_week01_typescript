@@ -19,6 +19,7 @@ function serveChai(msg?: string) {
 }
 
 // exhaustive checks
+//This ensures that we handle all the possible cases of union type & if any new type is added in the future that doesn't exist in the union type, then TS gives errors.
 function orderChai(size: "small" | "medium" | "large" | number) {
     if(size === "small") {
         return `small chai...`
@@ -29,7 +30,7 @@ function orderChai(size: "small" | "medium" | "large" | number) {
     return `chai order ${size}`
 }
 
-
+// 
 class kulhadChai{
     serve() {
         return `Serving kulhad chai`;
@@ -44,10 +45,13 @@ class CuttingChai{
 
 function serve(chai : kulhadChai | CuttingChai) {
     if(chai instanceof kulhadChai) {
-        return chai.serve();
+        return chai.serve(); 
+    } else {
+        return chai.serve() // output => serving Cutting Chai
     }
 }
 
+//
 type ChaiOrder = {
     type: string
     sugar: number
@@ -66,7 +70,7 @@ function serveOrder(item:ChaiOrder | string) {
     if(isChaiOrder(item)){
         return `Serving ${item.type} chai with ${item.sugar}`
     }
-    return `Serving custom chai ${item}`
+    return `Serving custom chai: ${item}`
 }
 
 // very good way of writing a code
