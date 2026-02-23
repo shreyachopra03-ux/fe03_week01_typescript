@@ -1,3 +1,5 @@
+// Objects
+
 const chai = {
     name: 'masala chai',
     price: 20,
@@ -10,6 +12,7 @@ const chai = {
 //     isHot: boolean
 // }
 
+// Declaring Object Types
 let tea: {
     name: string;
     price: number;
@@ -53,7 +56,7 @@ type User = {
 
 // const u: User = {
 //     username: 'shreya',
-//     // password: '123'
+    // password: '123'
 // }
 
 // splitting out data types
