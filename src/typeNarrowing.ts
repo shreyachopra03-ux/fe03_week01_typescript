@@ -1,6 +1,8 @@
 // Type Narrowing = check lagao → TS sure ho jaata hai → error gayab
 // typeof check lgaane se ye type narrow bn gyaa kii mei explicitly bta rhi hu kii string ya number mei se bhi konsa type hoga
 
+
+// Type is narrowed down to one so that further I can check from suggestions which all methods I can apply on that particular data type
 function getChai(kind: string | number) {
     if(typeof kind === "string") {
         return `Making ${kind} chai...`;
@@ -8,21 +10,23 @@ function getChai(kind: string | number) {
     return `Chai order: ${kind}`;
 }
 
+// check Truthiness
 function serveChai(msg?: string) {
     if(msg) {
-        return `Aserving ${msg}`;
+        return `serving ${msg}`;
     }
     return `Serving default masala chai`;
 }
 
+// exhaustive checks
 function orderChai(size: "small" | "medium" | "large" | number) {
     if(size === "small") {
         return `small chai...`
     }
     if(size === "medium" || size === "large") {
-        return `make extra chai`
+        return `chai size is big`
     }
-    return `chai order #${size}`
+    return `chai order ${size}`
 }
 
 
@@ -99,4 +103,4 @@ function brew(order: MasalaChai | GingerChai) {
      
 // }
 
-// unknown is more safe as compared to any !!
+// unknown is more safe as compared to any !! 
