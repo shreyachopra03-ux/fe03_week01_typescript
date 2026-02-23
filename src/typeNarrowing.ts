@@ -1,5 +1,5 @@
 // Type Narrowing = check lagao → TS sure ho jaata hai → error gayab
-// 
+// typeof check lgaane se ye type narrow bn gyaa kii mei explicitly bta rhi hu kii string ya number mei se bhi konsa type hoga
 
 function getChai(kind: string | number) {
     if(typeof kind === "string") {
@@ -20,9 +20,9 @@ function orderChai(size: "small" | "medium" | "large" | number) {
         return `small chai...`
     }
     if(size === "medium" || size === "large") {
-        return `make extra chau`
+        return `make extra chai`
     }
-     return `chai order #${size}`
+    return `chai order #${size}`
 }
 
 
@@ -66,6 +66,8 @@ function serveOrder(item:ChaiOrder | string) {
 }
 
 // very good way of writing a code
+// Discriminated Union
+// "type" is the common literal property here.
 type MasalaChai = {type: 'masala'; spicelevel: number};
 type GingerChai = {type: 'ginger'; amount: number};
 type ElaichiChai = {type: 'elaichi'; aroma: number};
