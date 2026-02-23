@@ -1,9 +1,7 @@
-// Type assertion: TypeScript ko forcefully batana ki kisi value ka type kya hai, aur TypeScript bina check kiye maan leta hai.
+// Type assertion: TypeScript ko explicitly batana ki kisi value ka type kya hai, aur TypeScript bina check kiye maan leta hai.
 
-////
+// Forceful Type Assertion
 let response: any = '42';
-
-//
 let numericLength: number = (response as string).length;
 
 //
@@ -11,13 +9,13 @@ type Book = {
     name: string
 }
 
-// ye bta rha haii ki jab 
+// Forceful Type Assertion
 let bookString = '{"name": "who moved my cheese"}';
 let bookObject = JSON.parse(bookString) as Book
-console.log(bookObject.name);
+// console.log(bookObject.name);
 
-//
-const inputElement = document.getElementById('username') as HTMLInputElement;
+// Using Ts on DOM elements
+// const inputElement = document.getElementById('username') as HTMLInputElement;
 
 // example of any & unknown
 
@@ -34,11 +32,12 @@ newValue = 'chai';
 newValue = [1,3,5];
 newValue = 2.5;
 
+// Safety ke saath check hoyega ki agr strig hoga tbhi use Upper Case mei TS krega convert.
 if(typeof newValue === 'string') {
     newValue.toUpperCase();
 }
 
-// try & catch
+// try-catch block
 try{
 
 } catch (error) {
@@ -55,6 +54,7 @@ const strData: string = data as string
 //       
 type Role = 'admin' | 'user' | 'superadmin';
 
+// void means kuch bhi return nhi hora ya jo return hoga idc about that
 function redirectBasedOnRole(role: Role): void {
     if ( role === 'admin') {
     console.log('Redirecting to admin dashboard');
@@ -68,9 +68,10 @@ function redirectBasedOnRole(role: Role): void {
 }
 
 // Type never
+// never is used to indicate that a function will never return normally, such as infinite loops or functions that always throw errors.
+
 function neverReturn():never{
     while(true){
-
     }
 }
 
