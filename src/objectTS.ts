@@ -59,7 +59,9 @@ type User = {
     // password: '123'
 // }
 
+
 // splitting out data types
+// This type of code respresentation gives code clarity
 type Item = {name: string, quantity: number}
 type Address = {street: string, pin: number}
 
@@ -71,7 +73,7 @@ type Order = {
 
 // interesting example
 // Partial makes all the properties in data type optional !
-// partial mei empty obj bhi pass kr skte hai jo issue causing hojaata hai sometimes
+// We can pass empty obj also in partial, but it can be bug casuing in some cases
 
 // type Chai = {
 //     name: string;
@@ -128,5 +130,5 @@ type ChaiNew = {
     secretIngredients: string;
 }
 
-// bs jo secret ingredients h vo nhi dikhenge ab
+// secret Ingredients will not be visible now
 type PubliChai = Omit<Chai, 'secretIngredients'>;
