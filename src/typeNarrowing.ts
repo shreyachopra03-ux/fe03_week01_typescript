@@ -51,7 +51,7 @@ function serve(chai : kulhadChai | CuttingChai) {
     }
 }
 
-//
+// TYPE GUARD
 type ChaiOrder = {
     type: string
     sugar: number
@@ -67,15 +67,19 @@ function isChaiOrder(obj:any):obj is ChaiOrder{
 }
 
 function serveOrder(item:ChaiOrder | string) {
+    // TS is sure item: chaiOrder 
     if(isChaiOrder(item)){
         return `Serving ${item.type} chai with ${item.sugar}`
     }
+    // TS is sure item: string
     return `Serving custom chai: ${item}`
 }
 
 // very good way of writing a code
 // Discriminated Union
-// "type" is the common literal property here.
+// "type" is the "common literal" property here.
+// This is the most safest code
+
 type MasalaChai = {type: 'masala'; spicelevel: number};
 type GingerChai = {type: 'ginger'; amount: number};
 type ElaichiChai = {type: 'elaichi'; aroma: number};
@@ -97,6 +101,7 @@ function MakeChai(order: Chai) {
     }
 }
 
+// Not recommended to code like this
 function brew(order: MasalaChai | GingerChai) {
     if ('spicelevel' in order) {
         //
