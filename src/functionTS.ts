@@ -1,9 +1,7 @@
 // example of fn's
-
 function makeChai(type: string, cups: number) {
     console.log(`Making ${cups} cups of ${type}`);
 }
-
 makeChai('masala', 2)
 
 function getChaiPrice():number {
@@ -27,9 +25,7 @@ function logChai(): void {
 
 // default parameter
 function orderChai(type: string = 'masala') {
-
 }
-
 
 // 
 function createChai(order: {
