@@ -1,5 +1,12 @@
 // examples of arrays and enums in TypeScript
 // Arrays
+
+// syntax of writing array
+const chaiFlavours: string[] = ["Masala", "Adrak"]
+const chaiprice: number[] = [10, 20]
+
+const rating: Array<number> = [4.5, 5.0]
+
 type Chai = {
     name: string;
     price: number
