@@ -2,20 +2,20 @@
 
 // class Chai {
 //     flavour: string;
-//     // price: number
+//     price: number
 
-//     // constructor (flavour: string, price: number) {
-//     //     this.flavour = flavour
-//     //     this.price = price
-//     // }
+//     constructor (flavour: string, price: number) {
+//         this.flavour = flavour
+//         this.price = price
+//     }
 //     constructor (flavour: string) {
 //         this.flavour = flavour
 //         console.log(this)
 //     }
 // }
 
-// // const masalaChai = new Chai('ginger', 35)
-// // masalaChai.flavour = 'masala'
+// const masalaChai = new Chai('ginger', 35)
+// masalaChai.flavour = 'masala'
 
 // const masalaChai = new Chai('ginger')
 // masalaChai.flavour = 'masala'
@@ -25,11 +25,15 @@
 class chai{
     public flavour: string = 'masala'
 
+    // accessible within the class only
     private secretIngredients = 'cardamom'
 
     reveal() {
         return this.secretIngredients // ok
-    }       
+    }      
+    
+    // only accessible within class or if any class is inheriting it 
+    protected shopName = "chai corner"
 }
 
 class shop {
